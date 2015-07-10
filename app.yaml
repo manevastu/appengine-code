@@ -1,0 +1,12 @@
+application: manevastu
+version: 1
+runtime: go
+api_version: go1
+
+# https://developers.google.com/appengine/docs/go/config/appconfig
+handlers:
+- url: /static_files
+  static_dir: static_files
+  
+- url: /.*
+  script: _go_app
